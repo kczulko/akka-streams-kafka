@@ -13,7 +13,7 @@ object Main {
     implicit val materializer = ActorMaterializer()
 
     val consumerSettings = ConsumerSettings(system, new ByteArrayDeserializer, new StringDeserializer)
-      .withBootstrapServers("localhost:9092;localhost:9093")
+      .withBootstrapServers("127.0.0.1:9092")
       .withGroupId("group1")
       .withProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest")
 

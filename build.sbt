@@ -9,7 +9,10 @@ lazy val commonSettings = Seq(
   libraryDependencies := Seq(
     "com.typesafe.akka" %% "akka-stream" % "2.4.17",
     "com.typesafe.akka" %% "akka-stream-kafka" % "0.16",
-    "ch.qos.logback" % "logback-classic" % "1.1.7"
+    "ch.qos.logback" % "logback-classic" % "1.1.7",
+    "io.kamon" %% "kamon-core" % "0.6.6",
+    "io.kamon" %% "kamon-statsd" % "0.6.6",
+    "com.typesafe" % "config" % "1.3.1"
   ),
   mainClass in assembly := Some("Main"),
   mergeStrategy in assembly := {
